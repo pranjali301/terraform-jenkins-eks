@@ -33,7 +33,7 @@ Once Jenkins is set up, it will trigger a pipeline that provisions the EKS clust
 
 ### 3. NGINX Deployment
 
-After the EKS cluster is successfully deployed, Jenkins will use Helm to deploy an NGINX application on the newly created Kubernetes cluster. This sets up a functional Kubernetes environment with a simple web application.
+After the EKS cluster is successfully deployed, Jenkins will deploy an NGINX application on the newly created Kubernetes cluster. This sets up a functional Kubernetes environment with a simple web application.
 
 ## Steps to Deploy
 
