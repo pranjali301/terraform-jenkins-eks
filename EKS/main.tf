@@ -33,10 +33,12 @@ module "eks" {
   source  = "terraform-aws-modules/eks/aws"
 
   cluster_name    = "eks-pranjali"
-  cluster_version = "1.21"
+  cluster_version = "1.28"  
 
-  vpc_id     = "module.vpc.vpc_id"
+  vpc_id     = module.vpc.vpc_id
   subnet_ids = module.vpc.private_subnets
+
+  create_cloudwatch_log_group = false
   
   eks_managed_node_groups = {
     nodes = {
@@ -48,6 +50,7 @@ module "eks" {
     }
     
   }
+  
 
   tags = {
     Environment = "dev"
